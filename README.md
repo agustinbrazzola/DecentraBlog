@@ -1,15 +1,29 @@
-# Basic Sample Hardhat Project
+# DecentraBlog
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+This is my personal blog stored on Mumbai. 
 
-Try running some of the following tasks:
+All the content you see here is also stored on IPFS. 
 
-```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
-npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
-```
+Feel free clone this repo and create yours
+
+## Instalation
+
+First lets clone the repo 
+
+    git clone 
+
+Now let's run a hardhat node
+
+    npx hardhat node
+
+Now let's deploy on local
+
+    npx hardhat run scripts/deploy.js --network localhost
+
+Now let's see the UI
+
+    npm run dev
+
+This should make the trick. Feel free to customize it as you wish.
+
+Agustin
