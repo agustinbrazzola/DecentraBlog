@@ -115,7 +115,7 @@ function MyApp({ Component, pageProps }) {
            </a>
            </Link>
                <div className={homeDescription}> 
-        This is my personal website. Here you will find anything useful about my professional profile.
+        This is my personal website. Here you will find anything useful about my professional profile. This is built on top of Mumbai Network and posts are stored on the blockchain.
         I highly encourage to take a deep look into my work. You&apos;ll see my tech stack, my job experience and some blockchain stuff I&apos;d like to share with you. Having in mind that blockchain positions are very complex, it makes sense to follow this format. 
         Hope you enjoy it and feel free to connect on any of my socials.
       </div>
