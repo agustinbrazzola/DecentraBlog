@@ -6,6 +6,7 @@ import Link from 'next/link'
 import { css } from '@emotion/css'
 import { ethers } from 'ethers'
 import { AccountContext } from '../../context'
+import Image from 'next/image'
 
 /* import contract and owner addresses */
 import {
@@ -44,8 +45,8 @@ export default function Post({ post }) {
             {
               /* if the post has a cover image, render it */
               post.coverImage && (
-                <img
-                  src={post.coverImage}
+                <Image
+                  src={post.coverImage} alt={"Image"}
                   className={coverImageStyle}
                 />
               )

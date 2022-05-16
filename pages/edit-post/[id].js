@@ -6,6 +6,7 @@ import { css } from '@emotion/css'
 import dynamic from 'next/dynamic'
 import { ethers } from 'ethers'
 import { create } from 'ipfs-http-client'
+import Image from 'next/image';
 
 import {
   contractAddress
@@ -28,6 +29,7 @@ export default function Post() {
 
   useEffect(() => {
     fetchPost()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id])
   async function fetchPost() {
     /* we first fetch the individual post by ipfs hash from the network */
@@ -109,8 +111,8 @@ export default function Post() {
           <div>
             {
               post.coverImagePath && (
-                <img
-                  src={post.coverImagePath}
+                <Image
+                  src={post.coverImagePath} alt={"Image"}
                   className={coverImageStyle}
                 />
               )

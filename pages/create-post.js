@@ -5,6 +5,7 @@ import dynamic from 'next/dynamic'
 import { css } from '@emotion/css'
 import { ethers } from 'ethers'
 import { create } from 'ipfs-http-client'
+import Image from 'next/image'
 
 /* import contract address and contract owner address */
 import {
@@ -99,7 +100,7 @@ function CreatePost() {
     <div className={container}>
       {
         image && (
-          <img className={coverImageStyle} src={URL.createObjectURL(image)} />
+          <Image className={coverImageStyle} src={URL.createObjectURL(image)} alt={"Image"} />
         )
       }
       <input

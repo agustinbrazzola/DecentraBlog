@@ -11,6 +11,10 @@ import { ownerAddress } from '../config'
 import 'easymde/dist/easymde.min.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTwitter, faLinkedin, faGithub, faDiscord } from '@fortawesome/free-brands-svg-icons'
+import Image from 'next/image'
+import config from "@fortawesome/fontawesome-svg-core/styles.css";
+config.autoAddCss = false;
+
 
 function MyApp({ Component, pageProps }) {
   /* create local state to save account information after signin */
@@ -51,10 +55,11 @@ function MyApp({ Component, pageProps }) {
         <div className={header}>
           <Link href="/">
             <a>
-              <img
+              <Image
                 src='/logo.svg'
                 alt="React Logo"
-                style={{ width: '50px' }}
+                width= {55} 
+                height= {55}
               />
             </a>
           </Link>
@@ -62,7 +67,7 @@ function MyApp({ Component, pageProps }) {
             <a>
               <div className={titleContainer}>
                 <h2 className={title}>Agustin Brazzola</h2>
-                <p className={description}>This is my personal website built on top of Mumbai</p>
+                <p className={description}>Full stack web 3 developer</p>
               </div>
             </a>
           </Link>
@@ -93,7 +98,7 @@ function MyApp({ Component, pageProps }) {
                 </a>
               </Link>
             )
-}
+          }
            <Link href="https://twitter.com/pdog355">
            <a className={linkContainer}>
              <FontAwesomeIcon icon={faTwitter}></FontAwesomeIcon>
@@ -110,8 +115,8 @@ function MyApp({ Component, pageProps }) {
            </a>
            </Link>
                <div className={homeDescription}> 
-        This is Agustin's personal portfolio.
-        I highly encourage to take a deep look into my work. You'll see my tech stack, my job experience and some blockchain stuff I'd like to share with you. 
+        This is my personal website. Here you will find anything useful about my professional profile.
+        I highly encourage to take a deep look into my work. You&apos;ll see my tech stack, my job experience and some blockchain stuff I&apos;d like to share with you. Having in mind that blockchain positions are very complex, it makes sense to follow this format. 
         Hope you enjoy it and feel free to connect on any of my socials.
       </div>
         </div>
@@ -125,7 +130,6 @@ function MyApp({ Component, pageProps }) {
     </div>
   )
 }
-
 const accountInfo = css`
   width: 100%;
   color: green;
@@ -150,7 +154,6 @@ const nav = css`
 
 const header = css`
   display: flex;
-  border-bottom: 1px solid rgba(0, 0, 0, .075);
   padding: 20px 30px;
 `
 
@@ -159,9 +162,9 @@ margin: 0;
 color: #999999;
 `
 const homeDescription = css`
-font-weight: 500;
+font-weight: 400;
 font-size: 22px;
-margin: 60px;
+margin: 30px;
 color: #999999;
 `
 

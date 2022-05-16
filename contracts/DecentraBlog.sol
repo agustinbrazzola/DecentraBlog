@@ -64,7 +64,7 @@ contract DecentraBlog {
      function updatePost(uint postId, string memory title, string memory hash, bool published) public onlyOwner {
         Post storage post =  idToPost[postId];
         post.title = title;
-        post.published = published;
+        post.published = true;
         post.content = hash;
         idToPost[postId] = post;
         hashToPost[hash] = post;

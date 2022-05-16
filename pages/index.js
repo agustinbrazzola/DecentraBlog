@@ -5,6 +5,9 @@ import { useRouter } from 'next/router'
 import { ethers } from 'ethers'
 import Link from 'next/link'
 import { AccountContext } from '../context'
+import Image from 'next/image'
+import config from "@fortawesome/fontawesome-svg-core/styles.css"
+config.autoAddCss = false;
 
 /* import contract address and contract owner address */
 import {
@@ -13,6 +16,7 @@ import {
 
 /* import Application Binary Interface (ABI) */
 import DecentraBlog from '../artifacts/contracts/DecentraBlog.sol/DecentraBlog.json'
+
 
 export default function Home(props) {
   /* posts are fetched server side and passed in as props */
@@ -36,11 +40,12 @@ export default function Home(props) {
                 <div className={linkStyle}>
                   <p className={postTitle}>{post[1]}</p>
                   <div className={arrowContainer}>
-                  <img
-                      src='/right-arrow.svg'
-                      alt='Right arrow'
-                      className={smallArrow}
-                    />
+                  <Image
+                src='/right-arrow.svg'
+                alt='Right arrow'
+                width= {35} 
+                height= {35}        
+              />
                   </div>
                 </div>
                 
@@ -49,19 +54,13 @@ export default function Home(props) {
           ))
         }
       </div>
-      <div className={container}>
+      <div className={container}> 
         {
           (account === ownerAddress) && posts && !posts.length && (
             /* if the signed in user is the account owner, render a button */
             /* to create the first post */
             <button className={buttonStyle} onClick={navigate}>
-              Create your first post
-              <img
-                src='/right-arrow.svg'
-                alt='Right arrow'
-                className={arrow}
-              />
-            </button>
+               Create your first post</button>
           )
         }
       </div>
@@ -115,7 +114,6 @@ const linkStyle = css`
 const postList = css`
   width: 700px;
   margin: 0 auto;
-  padding-top: 50px;  
 `
 
 const container = css`
@@ -136,8 +134,7 @@ const buttonStyle = css`
 `
 
 const arrow = css`
-  width: 35px;
-  margin-left: 30px;
+  justify-content: flex-end;
 `
 
 const smallArrow = css`

@@ -24,9 +24,9 @@ module.exports = {
     hardhat: {
       chainId: 1337
     },
-   mumbai: {
-     url: process.env.INFURA_ENDPOINT,
-     accounts: [process.env.pk]
+  mumbai: {
+    url: process.env.INFURA_ENDPOINT,
+    accounts: [process.env.pk]
       },
     },
       etherscan: {
